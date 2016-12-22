@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  title: Goodfoot Programming Test API
+  version: "1.0.0"
+host: localhost:8080
+schemes:
+  - http
+basePath: /api/1.0
+produces:
+  - text/plain
+consumes:
+  - application/x-www-form-urlencoded
+paths:
+  /verify-signature:
+    post:
+      summary: Verify Signature
+      description: |
+        The Verify Signature endpoint creates an MD5 hash of the 'key' 
+        parameter and compares it to the 'x-key-hash' header.
+      parameters:
+        - name: key
+          in: formData
+          description: An arbitrary string.
+          required: true
+          type: string
+        - name: x-key-hash
+          in: header
+          description: MD5 hash of the 'key' parameter.
+          required: true
+          type: string
+      responses:
+        200:
+          description: The API endpoint has verified that the 'x-key-hash' header matches the MD5 hash of the 'key' parameter.
+          schema:
+            type: string
+        400:
+          description: The 'x-key-hash' parameter does not match the MD5 hash of the 'key' parameter.
+          schema:
+            type: string
