@@ -6,12 +6,12 @@
   "scripts": {
     "docker": "docker build -t goodfoot-programming-test ./src; docker run -p 8080:8080 goodfoot-programming-test",
     "project-test": "./node_modules/.bin/wdio wdio.conf.js",
-    "lint": "./node_modules/.bin/eslint ./**"
+    "lint": "eslint ./**/*.js"
   },
   "author": "",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "assert": "^1.4.1",
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",

@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb",
+  "rules": {
+  	"require-yield": 0,
+  	"func-names": 0
+  }
+}

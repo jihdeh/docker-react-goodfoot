@@ -11,7 +11,7 @@ exports.config = {
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: './errorShots/',
-    baseUrl: 'http://qumu-vcc.goodfoot.io',
+    baseUrl: 'http://localhost:8080',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,

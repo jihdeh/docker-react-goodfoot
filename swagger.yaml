@@ -30,7 +30,7 @@ paths:
           type: string
       responses:
         200:
-          description: The API endpoint has verified that the 'x-key-hash' header matches the MD5 hash of the 'key' parameter.
+          description: The 'x-key-hash' header matches the MD5 hash of the 'key' parameter.
           schema:
             type: string
         400:
