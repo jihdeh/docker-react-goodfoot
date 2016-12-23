@@ -7,9 +7,9 @@ All code and supporting files should be placed in the [src](src) directory. Do n
 The reviewer will execute `npm run docker` to build and run the Docker image then `npm run project-test` to verify technical completion.
 ___
 
-## API endpoint
+## API
 
-Compares a MD5 hash of the `key` POST parameter with the `x-key-hash` header.
+Path `/api/1.0/verify-signature` compares a MD5 hash of the `key` POST parameter with the `x-key-hash` header.
 
 * Implement using [Koa](http://koajs.com/).
 * Formal specification at [swagger.yaml](swagger.yaml). You may want to generate documentation using [editor.swagger.io](http://editor.swagger.io/).
@@ -24,7 +24,7 @@ Renders text input fields corresponding to the `key` parameter and `x-key-hash` 
 * Renders:
   * A text input with ID `#key`
   * A text input with ID `#hash`
-  * A clickable element with ID `#submit` that submits the values of the `#key` and `#hash` fields as the `key` and `x-key-hash` API parameters, respectively.
+  * A clickable element with ID `#submit` that submits the values of the `#key` and `#hash` fields as the `key` and `x-key-hash` API endpoint parameters, respectively.
   * An element with ID `#response` that contains the HTTP response code returned from the API call.
 * Tests in [project-tests/core.test.js](project-tests/core.test.js).
 
@@ -41,7 +41,9 @@ Files to build a Docker image containing the API endpoint and static website.
 In no particular order, bonus points will be awarded for:
 
  * Speed of implementation
+ * Logical and readable git commits
  * Code style and elegance
- * Website look and feel
+   * Execute `npm run lint` to lint
+ * Website look and feel 
  * Use of [Redux](http://redux.js.org/)
- * Recommendations on how to improve the test
+ * Recommendations on improving the test project

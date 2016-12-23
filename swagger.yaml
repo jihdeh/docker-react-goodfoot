@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  title: Goodfoot Programming Test API
+  title: Goodfoot Test Project API
   version: "1.0.0"
 host: localhost:8080
 schemes:
