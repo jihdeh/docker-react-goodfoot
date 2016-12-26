@@ -44,15 +44,15 @@ const SignatureForm = enhance(({
 }) => {
 	const response = Object.assign({}, signature.toJS());
 	return (
-		<div>
+		<div className="signatureForm">
 			<form onSubmit={handleSubmit}>
 				<Input placeholder="Enter Key" id="key" value={sigKey} onChange={evt => setKeyValue(evt.target.value)}/>
 				<Input placeholder="Enter Hash" id="hash" value={hash} onChange={evt => setHashValue(evt.target.value)} />
-				<Button type="primary" htmlType="submit">Log in</Button>
+				<Button type="primary" htmlType="submit" id="submit">Log in</Button>
 			</form>
 			<br />
-			<hr />
-			{response.signatureResponse && 
+			<h3>Response:</h3>
+			{response.signatureResponse &&
 				<div className="statusCode">
 					<Timeline>
 						<Timeline.Item>StatusCode: {response.signatureResponse.status}</Timeline.Item>
