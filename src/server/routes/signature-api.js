@@ -15,12 +15,7 @@ router.post("/verify-signature", function*() {
 	const {key} = this.request.body;
 	let hashedKey = crypto.createHash('md5').update(key).digest('hex');
 	const hash = this.request.headers["x-key-hash"];
-	if(!key || !hash) {
-		this.status = 400;
-		this.body = "Not Authorized";
-		return;
-	};
-	if(hashedKey !== hash) {
+	if((!key || !hash) || (hashedKey !== hash)) {
 		this.status = 400;
 		this.body = "Not Authorized";
 		return;
