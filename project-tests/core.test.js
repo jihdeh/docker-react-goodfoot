@@ -17,7 +17,6 @@ describe('Goodfoot Programming Test', () => {
       .type('form')
       .set('x-key-hash', hash)
       .send({ key });
-      console.log(hash)
     assert.equal(response.statusCode, 200);
   }));
   it('should return a 400 status code after a failed API call', co.wrap(function* () {
