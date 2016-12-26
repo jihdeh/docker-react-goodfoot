@@ -1,10 +1,12 @@
+// @flow
+
 import axios from "axios";
 import { fromJS } from "immutable";
 
 export const SET_SIGNATURE = "SET_SIGNATURE";
 
 
-export const setSignature = (signatureResponse) => ({
+export const setSignature = (signatureResponse: Object) => ({
   type: SET_SIGNATURE,
   signatureResponse
 });
@@ -17,7 +19,7 @@ export const postSignature = ({sigKey, hash}) => async dispatch => {
     		"x-key-hash": hash
     	}
     });
-    dispatch(setSignature(fromJS({response})));
+    dispatch(setSignature(fromJS(response)));
   } catch (error) {
     dispatch(setSignature(fromJS({status: 400})));
   }
