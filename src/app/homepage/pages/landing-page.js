@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import frontPage from "../../decorators/frontpage";
-// import AnalyticsAccordion from "../components/analytics-accordion";
+import SignatureForm from "../components/signature-form";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-	signature: state.get("analytics")
+	signature: state.get("signature")
 });
 
 @frontPage()
@@ -18,7 +18,7 @@ class HomeView extends Component {
 		} = this.props;
 		return (
 			<div className="container">
-				<p> Hello</p>
+				<SignatureForm signature={signature}/>
 			</div>
 		)
 	}

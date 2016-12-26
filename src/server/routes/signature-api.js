@@ -7,8 +7,15 @@ const router = koaRouter();
 
 api.use(bodyParser());
 
-router.get("/:verify-signature", function*() {
-	this.body = "hello";
+router.post("/verify-signature", function*() {
+	const {hash, key} = this.request.body;
+	if(!hash && !key) {
+		this.status = 400;
+		this.body = "Not Authorized";
+		return;
+	}
+	this.status = 200;
+	this.body = "Success";
 });
 
 api

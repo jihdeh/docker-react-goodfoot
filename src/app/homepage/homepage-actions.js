@@ -11,8 +11,9 @@ export const setSignature = (signatureResponse) => ({
 
 export const postSignature = (params) => async dispatch => {
   try {
-    const response = await axios.post("/api/1.0/verify-signature", params);
-    dispatch(fetchBuild(fromJS(response)));
+  	console.log(params, "----")
+    const response = await axios.post("/api/1.0/verify-signature", params, {headers: params});
+    dispatch(setSignature(fromJS(response)));
   } catch (error) {
     console.trace(error);
   }
