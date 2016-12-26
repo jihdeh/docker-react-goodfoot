@@ -17,7 +17,7 @@ export const postSignature = ({sigKey, hash}) => async dispatch => {
     		"x-key-hash": hash
     	}
     });
-    dispatch(setSignature(fromJS(response)));
+    dispatch(setSignature(fromJS({response})));
   } catch (error) {
     dispatch(setSignature(fromJS({status: 400})));
   }
