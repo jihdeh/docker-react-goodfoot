@@ -47,3 +47,5 @@ In no particular order, bonus points will be awarded for:
  * Website look and feel 
  * Use of [Redux](http://redux.js.org/)
  * Recommendations on improving the test project
+ * Use of type checking tools like [Flow](https://flowtype.org/)
+ 
