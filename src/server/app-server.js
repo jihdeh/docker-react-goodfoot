@@ -24,7 +24,7 @@ function startWorker() {
   const port = process.env.PORT || 8080;
   app.listen(port);
 
-  console.info(`==> ✅  Server is listening in ${process.env.NODE_ENV} mode, with worker ${process.pid}`)
+  console.info(`==> ✅  Server is listening in ${process.env.NODE_ENV || "production"} mode, with worker ${process.pid}`)
   console.info(`==> 🌎  started on port ${port}`, {event: "start", port})
 
   if (process.send) {

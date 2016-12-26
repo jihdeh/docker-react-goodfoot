@@ -41,3 +41,4 @@ src.example
 errorShots
 
 .DS_Store
+dist
