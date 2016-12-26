@@ -1,3 +1,5 @@
+// @flow
+
 import koa from "koa";
 import koaRouter from "koa-router";
 import bodyParser from "koa-bodyparser";

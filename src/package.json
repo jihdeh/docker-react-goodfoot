@@ -72,6 +72,7 @@
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.13",
     "css-loader": "^0.25.0",
+    "flow-bin": "^0.37.4",
     "glob": "^5.0.14",
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^3.0.0",
