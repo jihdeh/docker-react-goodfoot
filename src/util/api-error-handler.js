@@ -1,5 +1,4 @@
 import log from "./log";
-import util from "util";
 
 export default function* apiErrorHandler(next) {
 	try {
