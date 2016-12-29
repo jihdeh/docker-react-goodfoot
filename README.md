@@ -1,4 +1,4 @@
-# Goodfoot Test Project
+# Docker Tryout - Project Goodfoot
 
 Create a web application packaged in a Docker image that serves a website and a single API endpoint. Commit and push the solution to this repository. You may use any code or libraries suitable for commercial distribution, including boilerplate.
 
@@ -33,12 +33,12 @@ Renders text input fields corresponding to the `key` parameter and `x-key-hash` 
 Files to build a Docker image containing the API endpoint and static website.
 
 * Implement using [Docker](https://docs.docker.com/).
-* Should build with `docker build -t goodfoot-programming-test ./src` from the root of the repository.
-* Should run with `docker run -p 8080:8080 goodfoot-programming-test`.
+* Should build with `docker build -t goodfoot ./src` from the root of the repository.
+* Should run with `docker run -p 8080:8080 goodfoot`.
 
-## Bonus points
+## Addons
 
-In no particular order, bonus points will be awarded for:
+In no particular order:
 
  * Speed of implementation
  * Logical and readable git commits
@@ -48,4 +48,9 @@ In no particular order, bonus points will be awarded for:
  * Use of [Redux](http://redux.js.org/)
  * Recommendations on improving the test project
  * Use of type checking tools like [Flow](https://flowtype.org/)
+
+## Before Starting
+
+* Run `yarn install` this creates a build file, then you can start docker.
  
+

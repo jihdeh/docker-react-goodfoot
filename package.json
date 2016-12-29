@@ -1,10 +1,10 @@
 {
-  "name": "goodfoot-programming-test",
+  "name": "docker-react-tryout",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docker": "docker build -t goodfoot-programming-test ./src; docker run -p 8080:8080 goodfoot-programming-test",
+    "docker": "docker build -t goodfoot ./src; docker run -p 8080:8080 goodfoot",
     "project-test": "./node_modules/.bin/wdio wdio.conf.js",
     "lint": "eslint ./**/*.js"
   },
