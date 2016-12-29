@@ -51,7 +51,7 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
       },
     }),
   ] : []).concat([
@@ -67,7 +67,7 @@ module.exports = {
     new AssetsPlugin({
       path: path.resolve(__dirname, 'dist', 'js'),
       filename: 'chunks.json',
-      processOutput: x => JSON.stringify(x)
+      processOutput: x => JSON.stringify(x),
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ar/),
   ]),
