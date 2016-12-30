@@ -15,8 +15,8 @@ COPY style /usr/src/app/style
 COPY util /usr/src/app/util
 
 RUN yarn install
-RUN npm run build
 
 COPY . /usr/src/app
+RUN npm run build
 
 CMD ["npm", "run", "start"]
